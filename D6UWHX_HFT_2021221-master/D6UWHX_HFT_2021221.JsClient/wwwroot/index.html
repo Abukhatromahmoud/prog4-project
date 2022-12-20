@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Movie Management</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+
+<body>
+    <h1>Movie manager</h1>
+    <h3>Select one to manage!</h3>
+    <div id="formdiv">
+        <button onclick="ChangeToAlbums()">Albums</button>
+        <button onclick="ChangeToArtists()">Artists</button>
+        <button onclick="ChangeToTracks()">Track2</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function ChangeToTracks() {
+        location.replace("Track2.html")
+    }
+    function ChangeToAlbums() {
+        location.replace("Album.html")
+    }
+    function ChangeToArtists() {
+        location.replace("Artist.html")
+    }
+</script>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Album</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+<body>
+    <h1>Album</h1>
+    <div id="formdiv">
+        <label>Title</label>
+        <input type="text" id="Album_Title" />
+        <button type="button" onclick="Create()">Add Album</button>
+        <button type="button" onclick="Update()">Update Album</button>
+        <button type="button" onclick="Delete()">Delete Album</button>
+
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>AlbumID</th>
+                <th>Title</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+    <button onclick="ChangeToIndex()">Return to Main Page</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="AlbumScript.js"></script>
+</body>
+</html>

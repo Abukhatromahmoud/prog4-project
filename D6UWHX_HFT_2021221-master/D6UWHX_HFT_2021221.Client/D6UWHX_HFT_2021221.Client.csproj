@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ٌRestService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConsoleMenu-simple" Version="2.4.1" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\D6UWHX_HFT_2021221.Data\D6UWHX_HFT_2021221.Data.csproj" />
+    <ProjectReference Include="..\D6UWHX_HFT_2021221.Logic\D6UWHX_HFT_2021221.Logic.csproj" />
+    <ProjectReference Include="..\D6UWHX_HFT_2021221.Models\D6UWHX_HFT_2021221.Models.csproj" />
+    <ProjectReference Include="..\D6UWHX_HFT_2021221.Repository\D6UWHX_HFT_2021221.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

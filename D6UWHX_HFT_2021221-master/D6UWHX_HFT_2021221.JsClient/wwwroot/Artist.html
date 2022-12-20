@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Artist</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+<body>
+    <h1>Artist</h1>
+    <div id="formdiv">
+        <label>Artist Name</label>
+        <input type="text" id="Artist_Name" />
+        <label>Age</label>
+        <input type="number" id="Artist_Age" />
+        <button type="button" onclick="Create()">Add Artist</button>
+        <button type="button" onclick="Update()">Update Artist</button>
+        <button type="button" onclick="Delete()">Delete Artist</button>
+
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ArtistId</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+    <button onclick="ChangeToIndex()">Return to Main Page</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="ArtistScript.js"></script>
+</body>
+</html>

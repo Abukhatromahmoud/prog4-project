@@ -1,0 +1,49 @@
+﻿<Window x:Class="D6UWHX_HFT_2021221.Wpf.NoncrudWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:D6UWHX_HFT_2021221.Wpf"
+        mc:Ignorable="d"
+        Title="NoncrudWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:NoncrudWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "1*"></ColumnDefinition>
+            <ColumnDefinition Width = "1*"></ColumnDefinition>
+            <ColumnDefinition Width = "1*"></ColumnDefinition>
+            <ColumnDefinition Width = "1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" Grid.Column="0">
+            <Label Content="Longest Track Length" Background="LightBlue" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <Button Content="Show" Padding="5" Command="{Binding Get_LONGEST_TRACK_Artist}" Height="50"></Button>
+            <Label Content="Get Shortest Track" Background="LightBlue" Padding="5" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <Button Content="Show" Padding="5" Command="{Binding GetShortestTrack}" Height="50"></Button>
+            <Label Content="Get Total Artist in database" Background="LightBlue" Height="40" Padding="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <Button Content="Show" Command="{Binding GetTotalArtists}" Padding="5" Height="50"></Button>
+            <Label Background="AliceBlue"/>
+            <!--<Label Content="Album's highest (write album Id here)" Background="LightBlue" Padding="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <TextBox Text="{Binding SelectedAlbumonId}" Padding="5" TextAlignment="Center" />
+            <Button Content="Show" Padding="5" Command="{Binding GetHighestAlbumArtist}"></Button>
+            <Label Content="Album's lowest (write album Id here)" Background="LightBlue" Padding="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+            <TextBox Text="{Binding SelectedAlbumonId}" Padding="5" TextAlignment="Center" />
+            <Button Content="Show" Padding="5" Command="{Binding GetLowestAlbumArtist}"></Button>
+            <Label Content="Artist in database" Background="LightBlue" Padding="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <Button Content="Show" Command="{Binding GetArtist1}" Padding="5" ></Button>
+            <Label Content="Track before 2005" Background="LightBlue" Padding="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <TextBox Text="{Binding SelectedTrackId}" Padding="5" TextAlignment="Center" />
+            <Button Content="Show" Command="{Binding GetArtistsBefore2005}" Padding="5" ></Button>-->
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Grid.Column="2" Background="Beige">
+            <Label Content="{Binding LongestTrack}" Height="90" FontSize="25"></Label>
+            <Label Content="{Binding ShortestTrack}" Height="90" FontSize="25"></Label>
+            <Label Content="{Binding TotalArtists}" Height="90" FontSize="25"></Label>
+            <!--<Label Content="{Binding GetLowestAlbumArtist}" Padding="42"></Label>
+            <Label Content="{Binding GetArtist1}" Padding="26"></Label>
+            <Label Content="{Binding ArtistsBefore2005}" Padding="42"></Label>-->
+        </StackPanel>
+    </Grid>
+</Window>
